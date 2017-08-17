@@ -10,7 +10,7 @@ public class OpenBrowser {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();		
-		driver.get("https://the-internet.herokuapp.com/");		
+		driver.get("https://the-internet.herokuapp.com/");	// Open browser and launch HerokuApp.	
 	}
 
 }

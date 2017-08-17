@@ -3,16 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="SeleniumTraining.SeleniumTraining.OpenBrowser"/>
+      <class name="SeleniumTraining.SeleniumTraining.assertExercise"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="SeleniumTraining.SeleniumTraining.OpenBrowser">
+      <class name="SeleniumTraining.SeleniumTraining.assertExercise">
         <methods>
-          <include name="main"/>
+          <include name="loginFail"/>
+          <include name="loginPass"/>
         </methods>
-      </class> <!-- SeleniumTraining.SeleniumTraining.OpenBrowser -->
+      </class> <!-- SeleniumTraining.SeleniumTraining.assertExercise -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
