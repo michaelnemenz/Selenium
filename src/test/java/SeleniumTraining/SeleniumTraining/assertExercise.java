@@ -29,7 +29,7 @@ public class assertExercise {
 		driver.findElement(By.xpath("//*[@id='login']/button/i")).click();
 		
 		// Assert that a success message is displayed.
-		Assert.assertTrue(driver.findElement(By.className("flash success")).isDisplayed());
+		Assert.assertTrue(driver.getPageSource().contains("You logged into a secure area!"));
 		
 		// Close the browser session.
 		driver.quit();
@@ -56,7 +56,7 @@ public class assertExercise {
 		driver.findElement(By.xpath("//*[@id='login']/button/i")).click();
 		
 		// Assert that a failure message is displayed.
-		Assert.assertTrue(driver.findElement(By.className("flash error")).isDisplayed());
+		Assert.assertTrue(driver.getPageSource().contains("Your username is invalid!"));
 		
 		// Close the browser session.
 		driver.quit();
