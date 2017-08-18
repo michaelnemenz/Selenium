@@ -5,12 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class OpenBrowser {
+public class openBrowser {
+	
 	@Test
-
 	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();		
-		driver.get("https://the-internet.herokuapp.com/");	// Open browser and launch HerokuApp.	
+		
+		//Create an instance of the chrome browser.
+		WebDriver driver = new ChromeDriver();
+		
+		// Navigate to the HerokuApp website.
+		driver.get("https://the-internet.herokuapp.com/");	
+		
 	}
 
 }

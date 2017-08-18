@@ -9,13 +9,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class workingTables {
-	@Test
+public class workingWithTables8 {
+
+	// Create an instance of the chrome driver.
+	WebDriver driver = new ChromeDriver();
 	
+	@Test	
 	public void tablesExercise(){
-		// Create an instance of the chrome driver.
-		WebDriver driver = new ChromeDriver();
-		
+	
 		// 8-a
 		// Navigate to the HerokuApp website.
 		driver.get("https://the-internet.herokuapp.com/");
@@ -29,8 +30,8 @@ public class workingTables {
 		String firstColumnRow = driver.findElement(By.xpath("//*[@id='table1']/thead/tr/th[1]/span")).getText();
 				
 		// Print out and report the first column first row header value.
-		System.out.println("The first column/row header of the first table = [ " + firstColumnRow + " ].");
-		Reporter.log("The first column/row header of the first table = [ " + firstColumnRow + " ].<br>");
+		System.out.println("The first column/row header of the first table = " + firstColumnRow + ".");
+		Reporter.log("The first column/row header of the first table = " + firstColumnRow + ".<br>");
 		
 		// 8-d
 		// Get all the text of all cells in the first row.
@@ -39,8 +40,8 @@ public class workingTables {
 		// For loop through the first row  of cells to get and print their text.
 		for (int x = 0; firstRow.size() > x; x++) {
 			String cellText = firstRow.get(x).getText();
-			System.out.println("The cell value of [ "+ (x + 1) +" ] contains the following text: [ " + cellText + " ].");
-			Reporter.log("The cell value of ["+ (x + 1) +" ] contains the following text: [" + cellText + "].<br>");
+			System.out.println("The cell value of [ "+ (x + 1) +" ] contains the following text: " + cellText + ".");
+			Reporter.log("The cell value of ["+ (x + 1) +" ] contains the following text: " + cellText + ".<br>");
 		}
 		
 		// 8-e
@@ -62,11 +63,11 @@ public class workingTables {
 			
 			// Loop through the cells of the row to find the cell that contains 'jdoe@hotmail.com'.
 			for (WebElement cell : cellData) {
-				if (cell.getText().trim().equals("jdoe@hotmail.com")) {
+				if (cell.getText().equals("jdoe@hotmail.com")) {
 					isFound = true;
-					System.out.println("Row [ "+ rowCount +" ] contains the following text: " + cell.getText() + ".");
+					System.out.println("Row "+ rowCount +" contains the following text: " + cell.getText() + ".");
 						System.out.flush();
-					Reporter.log(("Cell value of [ "+ rowCount +" ] contains the following text: " + cell.getText() + ".<br>"));
+					Reporter.log(("Cell value of "+ rowCount +" contains the following text: " + cell.getText() + ".<br>"));
 					
 					// 8-f
 					// Click the 'delete' link for the row that contains the text 'jdoe@hotmail.com'.
@@ -76,11 +77,22 @@ public class workingTables {
 								// Click the 'delete' link.
 								WebElement deleteLink = actionCell.findElement(By.linkText("delete"));
 								deleteLink.click();
+								
+								// Confirm 'delete link' was clicked.
+								// Check URL for '#delete' with boolean flag.
+								
 							}
+							
 						}
+						
 					}
+					
 				}
+				
 			}
+			
 		}
+		
 	}
+	
 }

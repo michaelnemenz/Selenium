@@ -2,64 +2,64 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[The first column/row header of the first table = [ Last Name ].<br>]]>
+      <![CDATA[The first column/row header of the first table = Last Name.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [1 ] contains the following text: [Last Name].<br>]]>
+      <![CDATA[The cell value of [1 ] contains the following text: Last Name.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [2 ] contains the following text: [First Name].<br>]]>
+      <![CDATA[The cell value of [2 ] contains the following text: First Name.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [3 ] contains the following text: [Email].<br>]]>
+      <![CDATA[The cell value of [3 ] contains the following text: Email.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [4 ] contains the following text: [Due].<br>]]>
+      <![CDATA[The cell value of [4 ] contains the following text: Due.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [5 ] contains the following text: [Web Site].<br>]]>
+      <![CDATA[The cell value of [5 ] contains the following text: Web Site.<br>]]>
     </line>
     <line>
-      <![CDATA[The cell value of [6 ] contains the following text: [Action].<br>]]>
+      <![CDATA[The cell value of [6 ] contains the following text: Action.<br>]]>
     </line>
     <line>
       <![CDATA[Cell value of [ 1 ] contains the following text: jdoe@hotmail.com.<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4191" started-at="2017-08-18T12:52:06Z" finished-at="2017-08-18T12:52:10Z">
+  <suite name="Default suite" duration-ms="2557" started-at="2017-08-18T20:27:22Z" finished-at="2017-08-18T20:27:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4191" started-at="2017-08-18T12:52:06Z" finished-at="2017-08-18T12:52:10Z">
-      <class name="SeleniumTraining.SeleniumTraining.workingTables">
-        <test-method status="PASS" signature="tablesExercise()[pri:0, instance:SeleniumTraining.SeleniumTraining.workingTables@18be83e4]" name="tablesExercise" duration-ms="4179" started-at="2017-08-18T08:52:06Z" finished-at="2017-08-18T08:52:10Z">
+    <test name="Default test" duration-ms="2557" started-at="2017-08-18T20:27:22Z" finished-at="2017-08-18T20:27:25Z">
+      <class name="SeleniumTraining.SeleniumTraining.workingWithTables8">
+        <test-method status="PASS" signature="tablesExercise()[pri:0, instance:SeleniumTraining.SeleniumTraining.workingWithTables8@e1de817]" name="tablesExercise" duration-ms="2546" started-at="2017-08-18T16:27:22Z" finished-at="2017-08-18T16:27:25Z">
           <reporter-output>
             <line>
-              <![CDATA[The first column/row header of the first table = [ Last Name ].<br>]]>
+              <![CDATA[The first column/row header of the first table = Last Name.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [1 ] contains the following text: [Last Name].<br>]]>
+              <![CDATA[The cell value of [1 ] contains the following text: Last Name.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [2 ] contains the following text: [First Name].<br>]]>
+              <![CDATA[The cell value of [2 ] contains the following text: First Name.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [3 ] contains the following text: [Email].<br>]]>
+              <![CDATA[The cell value of [3 ] contains the following text: Email.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [4 ] contains the following text: [Due].<br>]]>
+              <![CDATA[The cell value of [4 ] contains the following text: Due.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [5 ] contains the following text: [Web Site].<br>]]>
+              <![CDATA[The cell value of [5 ] contains the following text: Web Site.<br>]]>
             </line>
             <line>
-              <![CDATA[The cell value of [6 ] contains the following text: [Action].<br>]]>
+              <![CDATA[The cell value of [6 ] contains the following text: Action.<br>]]>
             </line>
             <line>
               <![CDATA[Cell value of [ 1 ] contains the following text: jdoe@hotmail.com.<br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- tablesExercise -->
-      </class> <!-- SeleniumTraining.SeleniumTraining.workingTables -->
+      </class> <!-- SeleniumTraining.SeleniumTraining.workingWithTables8 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
