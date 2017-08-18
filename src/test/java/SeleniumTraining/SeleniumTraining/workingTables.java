@@ -62,17 +62,25 @@ public class workingTables {
 			
 			// Loop through the cells of the row to find the cell that contains 'jdoe@hotmail.com'.
 			for (WebElement cell : cellData) {
-				if (cell.getText().trim().equals("jdoe.hotmail.com")) {
+				if (cell.getText().trim().equals("jdoe@hotmail.com")) {
 					isFound = true;
-					System.out.println("Row [ "+ rowCount +" ] contains the following text: [ " + cell.getText() + " ].");
-					Reporter.log(("Cell value of [ "+ rowCount +" ] contains the following text: [ " + cell.getText() + " ].<br>"));
+					System.out.println("Row [ "+ rowCount +" ] contains the following text: " + cell.getText() + ".");
+						System.out.flush();
+					Reporter.log(("Cell value of [ "+ rowCount +" ] contains the following text: " + cell.getText() + ".<br>"));
 					
 					// 8-f
 					// Click the 'delete' link for the row that contains the text 'jdoe@hotmail.com'.
-					
+					if (isFound) {
+						for (WebElement actionCell : cellData) {
+							if (actionCell.getText().trim().contains("delete")) {
+								// Click the 'delete' link.
+								WebElement deleteLink = actionCell.findElement(By.linkText("delete"));
+								deleteLink.click();
+							}
+						}
+					}
 				}
 			}
 		}
-
 	}
 }
