@@ -7,14 +7,16 @@ import org.testng.annotations.Test;
 
 public class openBrowser {
 	
+	// Create an instance of the chrome driver.
+	WebDriver driver = new ChromeDriver();
+	
+	String url = "https://the-internet.herokuapp.com/";
+	
 	@Test
-	public static void main(String[] args) {
-		
-		//Create an instance of the chrome browser.
-		WebDriver driver = new ChromeDriver();
+	public void browserOpen() {
 		
 		// Navigate to the HerokuApp website.
-		driver.get("https://the-internet.herokuapp.com/");	
+		driver.get(url);
 		
 	}
 

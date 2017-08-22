@@ -28,7 +28,7 @@ public class radioButton7 {
 		
 		// Click the 'Other' radio button.
 		radButton.click();
-		System.out.println("The 'Other' radio button was clicked.");
+		System.out.println("The 'Other' radio button was selected.");
 		
 		// End the browser session.
 		driver.quit();

@@ -8,15 +8,17 @@ import org.testng.annotations.Test;
 
 public class selectElements6 {
 	
+	// Create an instance of the chrome driver.
+	WebDriver driver = new ChromeDriver();
+	
+	String url = "https://the-internet.herokuapp.com/";
+	
 	@Test	
 	public void selectDropDown() {
 		
-		// Create an instance of the chrome driver.
-		WebDriver driver = new ChromeDriver();
-		
 		// 1-a
 		// Navigate to the HerokuApp website.
-		driver.get("https://the-internet.herokuapp.com/"); 
+		driver.get(url); 
 		
 		// 1-b
 		// Click the link for the 'Dropdown'page.

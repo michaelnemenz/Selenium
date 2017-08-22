@@ -14,7 +14,7 @@ public class workingWithWaits10 {
 	WebDriver driver = new ChromeDriver();
 	
 	// Store the herokuApp site object.
-	String herokuApp = ("https://the-internet.herokuapp.com/");
+	String url = ("https://the-internet.herokuapp.com/");
 	
 	// Create the wait method. 
 	WebDriverWait wait = new WebDriverWait(driver, 15);
@@ -24,7 +24,7 @@ public class workingWithWaits10 {
 		
 		// 1-a
 		// Navigate to "https://the-internet.herokuapp.com/".
-		driver.get(herokuApp);
+		driver.get(url);
 		
 		// 1-b
 		// Click the link for the 'Dynamic Loading' page.
@@ -44,7 +44,7 @@ public class workingWithWaits10 {
 		System.out.println("'Hello World!' was visible.");
 
 		// Quit the browser session.
-		driver.quit();
+		//driver.quit();
 	}	
 	
 	@Test
@@ -55,7 +55,7 @@ public class workingWithWaits10 {
 		
 		//2-a		
 		// Navigate to "https://the-internet.herokuapp.com/".
-		driver.get(herokuApp);
+		driver.get(url);
 		
 		// 2-b
 		// Click the link for the 'Dynamic Loading' page.
@@ -71,11 +71,12 @@ public class workingWithWaits10 {
 		
 		//2-e
 		// Use the expected conditions class to wait for the loading bar to disappear.		
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='loading']/text()")));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='loading']/img")));
 		System.out.println("The 'Loading Bar' has vanished.");
+		//*[@id='loading']/text()
 		
 		// Quit the browser session.
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -84,7 +85,7 @@ public class workingWithWaits10 {
 		
 		// 3-a
 		// Navigate to "https://the-internet/herokuapp.com/".
-		driver.get(herokuApp);
+		driver.get(url);
 		
 		// 3-b
 		// Click the link for the 'Dynamic Loading' page.
@@ -105,7 +106,7 @@ public class workingWithWaits10 {
 			System.out.flush();
 		
 		// Quit the browser instance.
-		driver.quit();
+		//driver.quit();
 		
 	}	
 

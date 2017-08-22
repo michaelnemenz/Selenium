@@ -11,12 +11,14 @@ public class workingWithAssertions9 {
 	// Create an instance of the chrome driver.
 	WebDriver driver = new ChromeDriver();
 	
+	String url = "https://the-internet.herokuapp.com/";
+	
 	@Test	
 	public void loginPass1() {
 		
 		// 1-a
 		// Navigate to HerokuApp website.
-		driver.get("https://the-internet.herokuapp.com/");
+		driver.get(url);
 		
 		// 1-b
 		// Click the 'Form Authentication' link.
@@ -37,6 +39,7 @@ public class workingWithAssertions9 {
 		// 1-e
 		// Assert that a success message is displayed.
 		Assert.assertTrue(driver.getPageSource().contains("You logged into a secure area!"));
+		System.out.println("You logged in successfully");
 		
 		// Close the browser session.
 		driver.quit();
@@ -51,7 +54,7 @@ public class workingWithAssertions9 {
 		
 		// 1-a
 		// Navigate to the HerokuApp website.
-		driver.get("https://the-internet.herokuapp.com/");
+		driver.get(url);
 		
 		// 1-b
 		// Click the 'Form Authentication' link.
@@ -72,9 +75,10 @@ public class workingWithAssertions9 {
 		// 1-e
 		// Assert that a failure message is displayed.
 		Assert.assertTrue(driver.getPageSource().contains("Your username is invalid!"));
+		System.out.println("You failed to login");
 		
 		// Close the browser session.
-		driver.quit();
+		//driver.quit();
 		
 	}
 	

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -14,12 +15,14 @@ public class workingWithTables8 {
 	// Create an instance of the chrome driver.
 	WebDriver driver = new ChromeDriver();
 	
+	String url = "https://the-internet.herokuapp.com/";
+	
 	@Test	
 	public void tablesExercise(){
 	
 		// 8-a
 		// Navigate to the HerokuApp website.
-		driver.get("https://the-internet.herokuapp.com/");
+		driver.get(url);
 		
 		// 8-b
 		// Click the "Sortable Data Tables" link.
@@ -31,7 +34,6 @@ public class workingWithTables8 {
 				
 		// Print out and report the first column first row header value.
 		System.out.println("The first column/row header of the first table = " + firstColumnRow + ".");
-		Reporter.log("The first column/row header of the first table = " + firstColumnRow + ".<br>");
 		
 		// 8-d
 		// Get all the text of all cells in the first row.
@@ -41,7 +43,7 @@ public class workingWithTables8 {
 		for (int x = 0; firstRow.size() > x; x++) {
 			String cellText = firstRow.get(x).getText();
 			System.out.println("The cell value of [ "+ (x + 1) +" ] contains the following text: " + cellText + ".");
-			Reporter.log("The cell value of ["+ (x + 1) +" ] contains the following text: " + cellText + ".<br>");
+
 		}
 		
 		// 8-e
@@ -66,8 +68,7 @@ public class workingWithTables8 {
 				if (cell.getText().equals("jdoe@hotmail.com")) {
 					isFound = true;
 					System.out.println("Row "+ rowCount +" contains the following text: " + cell.getText() + ".");
-						System.out.flush();
-					Reporter.log(("Cell value of "+ rowCount +" contains the following text: " + cell.getText() + ".<br>"));
+						System.out.flush();					
 					
 					// 8-f
 					// Click the 'delete' link for the row that contains the text 'jdoe@hotmail.com'.
@@ -80,7 +81,12 @@ public class workingWithTables8 {
 								
 								// Confirm 'delete link' was clicked.
 								// Check URL for '#delete' with boolean flag.
+								String urlValidate = driver.getCurrentUrl();
+								Assert.assertTrue(urlValidate.trim().contains("delete"));
+								System.out.println("The 'Delete' link was successfully clicked.");
 								
+								// End the browser session.
+								driver.quit();
 							}
 							
 						}
